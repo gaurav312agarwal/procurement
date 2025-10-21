@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Vibrant neon dark theme for P2P Dashboard */
+    --background: 220 20% 4%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 190 100% 50%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 15% 14%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 190 100% 50%;
+    --accent-foreground: 210 20% 98%;
+
+    --neon-green: 120 100% 50%;
+    --neon-cyan: 180 100% 50%;
+    --neon-orange: 30 100% 60%;
+    --neon-purple: 270 100% 60%;
+    --neon-yellow: 55 100% 55%;
+    --neon-pink: 330 100% 60%;
+
+    --success: 120 100% 50%;
+    --success-foreground: 210 20% 98%;
+
+    --warning: 30 100% 60%;
+    --warning-foreground: 220 13% 6%;
+
+    --error: 0 100% 60%;
+    --error-foreground: 210 20% 98%;
+
+    --purple: 270 100% 60%;
+    --purple-foreground: 210 20% 98%;
+
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 12%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 180 100% 50%;
+    --chart-2: 120 100% 50%;
+    --chart-3: 30 100% 60%;
+    --chart-4: 270 100% 60%;
+    --chart-5: 55 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Dashboard card styles */
+  .dashboard-card {
+    @apply bg-card border border-border rounded-lg p-4 hover:border-primary/50 transition-all duration-300 shadow-lg;
+  }
+
+  .dashboard-card-header {
+    @apply text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3;
+  }
+
+  /* KPI styles */
+  .kpi-value {
+    @apply text-3xl font-bold text-foreground;
+  }
+
+  .kpi-label {
+    @apply text-xs text-muted-foreground uppercase tracking-wider;
+  }
+
+  .kpi-positive {
+    @apply text-success;
+  }
+
+  .kpi-negative {
+    @apply text-error;
+  }
+
+  .kpi-neutral {
+    @apply text-warning;
+  }
+
+  /* Neon glow effects */
+  .neon-glow-green {
+    box-shadow: 0 0 10px hsl(var(--neon-green) / 0.5), 0 0 20px hsl(var(--neon-green) / 0.3);
+  }
+
+  .neon-glow-cyan {
+    box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5), 0 0 20px hsl(var(--neon-cyan) / 0.3);
+  }
+
+  .neon-glow-orange {
+    box-shadow: 0 0 10px hsl(var(--neon-orange) / 0.5), 0 0 20px hsl(var(--neon-orange) / 0.3);
+  }
+
+  .neon-border-green {
+    border-color: hsl(var(--neon-green) / 0.5);
+  }
+
+  .neon-border-cyan {
+    border-color: hsl(var(--neon-cyan) / 0.5);
+  }
+
+  .neon-border-orange {
+    border-color: hsl(var(--neon-orange) / 0.5);
+  }
+}
