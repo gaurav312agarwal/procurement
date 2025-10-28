@@ -163,7 +163,7 @@ const Index = () => {
               Real-time insights into procurement performance and payment operations
             </p>
           </div>
-          <a href="https://dashbaord-landing.vercel.app/" className="ml-auto">
+          <a href="https://neat-pane-view.vercel.app/" className="ml-auto">
             <Button variant="outline" size="sm">← Back</Button>
           </a>
         </header>
